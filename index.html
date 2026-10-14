@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLPS Lunar Mission Browser &amp; Moon Explorer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/build/three.module.js", "three/addons/": "./vendor/three/examples/jsm/" } }
+  </script>
+</head>
+<body>
+<div id="app">
+  <nav id="rail" aria-label="Main navigation">
+    <div class="brand" title="CLPS Lunar Mission Browser &amp; Moon Explorer">☾</div>
+    <button data-panel="overview" class="active"><i>◎</i><span>Overview</span></button>
+    <button data-panel="missions"><i>⌖</i><span>CLPS Missions</span></button>
+    <button data-panel="stats"><i>▥</i><span>Mission Statistics</span></button>
+    <button data-panel="quakes"><i>≋</i><span>Moonquake Map</span></button>
+    <button data-panel="surface"><i>⛯</i><span>Surface Explorer</span></button>
+    <button data-panel="gravity"><i>⇣</i><span>Gravity Lab</span></button>
+    <button data-panel="env"><i>☀</i><span>Environment Lab</span></button>
+    <button data-panel="solar"><i>✺</i><span>Solar System</span></button>
+    <button data-panel="about"><i>ⓘ</i><span>Settings / About</span></button>
+  </nav>
+
+  <aside id="side" aria-label="Information panel">
+    <header><h2 id="side-title">Overview</h2><button id="side-collapse" aria-label="Collapse panel" title="Collapse panel">‹</button></header>
+    <div id="side-body">
+      <section id="panel-overview" class="panel">
+        <p>Explore a 3D Moon, browse NASA <b>Commercial Lunar Payload Services (CLPS)</b> missions, land at a site, walk the (simulated) surface, experiment with gravity, and travel out to the Solar System.</p>
+        <div class="scards" id="ov-cards"></div>
+        <div class="actions col">
+          <button class="btn primary" data-go="missions">Browse CLPS missions</button>
+          <button class="btn" data-go="quakes">Moonquake map &amp; layers</button>
+          <button class="btn" data-go="surface">Land on the Moon</button>
+          <button class="btn" data-go="solar">Solar System explorer</button>
+        </div>
+        <p class="note">Real data (missions, coordinates, Apollo seismic records) is kept separate from simulation settings. Simulated content is always labelled.</p>
+      </section>
+      <section id="panel-missions" class="panel" hidden></section>
+      <section id="panel-stats" class="panel" hidden></section>
+      <section id="panel-quakes" class="panel" hidden>
+        <div class="stats2">
+          <div class="stat"><span>Apollo stations</span><b id="apollo-count">—</b></div>
+          <div class="stat"><span>Seismic events</span><b id="quake-count">—</b></div>
+        </div>
+        <div class="section-title">MAP LAYERS</div>
+        <label class="filter"><input type="checkbox" id="show-apollo" checked><span class="toggle"></span><span class="fi"><span class="fn">Apollo stations</span><span class="fc" id="apollo-layer-count">—</span></span><span class="dot" style="--c:#00ffcc"></span></label>
+        <label class="filter"><input type="checkbox" id="show-shallow" checked><span class="toggle"></span><span class="fi"><span class="fn">Shallow moonquakes</span><span class="fc" id="shallow-count">—</span></span><span class="dot" style="--c:#ff3333"></span></label>
+        <label class="filter"><input type="checkbox" id="show-deep" checked><span class="toggle"></span><span class="fi"><span class="fn">Deep moonquakes</span><span class="fc" id="deep-count">—</span></span><span class="dot" style="--c:#ff9f43"></span></label>
+        <label class="filter"><input type="checkbox" id="show-impact" checked><span class="toggle"></span><span class="fi"><span class="fn">Artificial impacts</span><span class="fc" id="impact-count">—</span></span><span class="dot" style="--c:#b56cff"></span></label>
+        <label class="filter"><input type="checkbox" id="show-clps" checked><span class="toggle"></span><span class="fi"><span class="fn">CLPS landing sites</span><span class="fc" id="clps-layer-count">—</span></span><span class="dot" style="--c:#5fd4ff"></span></label>
+        <p class="note">Click a marker for details. Hollow CLPS diamonds are estimated region centres, not confirmed landing points.</p>
+        <div id="quake-status"></div>
+      </section>
+      <section id="panel-surface" class="panel" hidden></section>
+      <section id="panel-gravity" class="panel" hidden></section>
+      <section id="panel-env" class="panel" hidden></section>
+      <section id="panel-solar" class="panel" hidden></section>
+      <section id="panel-about" class="panel" hidden>
+        <h4>About &amp; data policy</h4>
+        <p>Mission facts come from NASA and provider documentation; each record keeps its source URL and last-checked date. Unknown values are shown as unknown, never filled in.</p>
+        <p><b>Simulated:</b> surface terrain (procedural, not real topography), the lander model (generic), the astronaut (scale reference only), Earth texture (stylised), environment effects in Mode B.</p>
+        <p><b>Solar System layout</b> uses a compressed visualisation scale — not a physically accurate distance map.</p>
+        <p class="note">Orbital globe model: <code>models/moon.glb</code>. Three.js (MIT) is bundled locally.</p>
+        <div id="about-source"></div>
+      </section>
+    </div>
+  </aside>
+
+  <main id="viewport">
+    <header id="topbar"><nav id="breadcrumb" aria-label="Location"></nav><div id="chips"></div></header>
+    <div id="loading"><div class="bar"><i id="loadbar"></i></div><span id="loadtext">Loading Moon model…</span></div>
+    <div id="detail-card" hidden role="dialog" aria-label="Details"></div>
+    <div id="hud" hidden></div>
+    <div id="labels"></div>
+    <div id="fade"></div>
+    <div id="toast" role="status"></div>
+    <div id="hint">Drag to rotate · scroll to zoom · click a marker</div>
+  </main>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

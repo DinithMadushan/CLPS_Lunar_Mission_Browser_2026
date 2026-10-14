@@ -1,0 +1,8 @@
+[
+ {"mission":"Apollo 11","latitude":0.67408,"longitude":23.47297,"instrument":"Passive Seismic Experiment (EASEP)"},
+ {"mission":"Apollo 12","latitude":-3.0128,"longitude":-23.4219,"instrument":"ALSEP Passive Seismic Experiment"},
+ {"mission":"Apollo 14","latitude":-3.6453,"longitude":-17.4714,"instrument":"ALSEP Passive Seismic Experiment"},
+ {"mission":"Apollo 15","latitude":26.1322,"longitude":3.6285,"instrument":"ALSEP Passive Seismic Experiment"},
+ {"mission":"Apollo 16","latitude":-8.9734,"longitude":15.5011,"instrument":"ALSEP Passive Seismic Experiment"},
+ {"mission":"Apollo 17","latitude":20.1908,"longitude":30.7717,"instrument":"ALSEP Passive Seismic Experiment"}
+]

@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "dataset": "CLPS mission records (bundled reference subset)",
+    "last_checked": "2026-10-12",
+    "policy": "Null means unknown/unavailable. Planned dates are never stored as actual timestamps. payload_count counts NASA-provided payloads unless payload_scope says otherwise; payloads[] lists only payloads whose names were confirmed and may be incomplete (payloads_listed_complete=false). payload categories are an editorial classification, not NASA's.",
+    "coordinate_kinds": {"reported_actual": "landing coordinates published by NASA/NSSDCA", "estimated_region": "approximate centre of the targeted feature; NOT an actual landing position", "unavailable": "no coordinates documented"},
+    "not_rechecked_this_session": "Peregrine launch time and NASA payload names for Peregrine and Blue Ghost 1 come from NASA mission pages as known to the author and were not re-fetched on 2026-10-12; re-verify before publication."
+  },
+  "missions": [
+    {
+      "id": "peregrine-1", "name": "Peregrine Mission One", "provider": "Astrobotic", "task_order": "TO2-AB",
+      "lander": "Peregrine", "launch_vehicle": "ULA Vulcan Centaur",
+      "launch_actual": "2024-01-08T07:18:00Z", "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": null, "landing_target_text": null,
+      "lifecycle": "launched", "outcome": "failure",
+      "outcome_note": "Propulsion anomaly prevented a lunar landing; NASA reports a controlled re-entry over the South Pacific.",
+      "target_site_name": "Sinus Viscositatis (reported target; coordinates not stored)", "landing_region": "Near side",
+      "latitude": null, "longitude": null, "coordinate_kind": "unavailable",
+      "coordinate_note": "No landing occurred, so no landing coordinates exist.",
+      "payload_count": 5, "payload_scope": "NASA-provided", "payloads_listed_complete": true,
+      "payloads": [
+        {"name": "Linear Energy Transfer Spectrometer (LETS)", "category": "Radiation", "description": "Measures radiation environment."},
+        {"name": "Near-Infrared Volatile Spectrometer System (NIRVSS)", "category": "Volatiles & resources", "description": "Spectrometer for surface composition and volatiles."},
+        {"name": "Neutron Spectrometer System (NSS)", "category": "Volatiles & resources", "description": "Detects hydrogen-bearing material via neutrons."},
+        {"name": "Peregrine Ion-Trap Mass Spectrometer (PITMS)", "category": "Exosphere & plasma", "description": "Measures exospheric composition."},
+        {"name": "Laser Retroreflector Array (LRA)", "category": "Navigation & geodesy", "description": "Passive reflector for laser ranging."}
+      ],
+      "source_url": "https://www.nasa.gov/commercial-lunar-payload-services/clps-providers/", "source_label": "NASA — CLPS Providers", "last_checked": "2026-10-12", "confidence": "high"
+    },
+    {
+      "id": "im-1", "name": "IM-1 (Odysseus)", "provider": "Intuitive Machines", "task_order": "TO2-IM",
+      "lander": "Nova-C Odysseus", "launch_vehicle": "SpaceX Falcon 9",
+      "launch_actual": "2024-02-15T06:05:37Z", "landing_actual": "2024-02-22T23:23:53Z", "ops_end_documented": true,
+      "launch_target_text": null, "landing_target_text": null,
+      "lifecycle": "completed", "outcome": "partial",
+      "outcome_note": "Soft landing near Malapert A; the lander tipped over and operated in an unexpected attitude. NASA lists the mission as completed.",
+      "target_site_name": "Malapert A region", "landing_region": "South polar region",
+      "latitude": -80.13, "longitude": 1.44, "coordinate_kind": "reported_actual",
+      "coordinate_note": "80.13°S, 1.44°E, elevation 2,579 m, per NASA LRO imagery release.",
+      "payload_count": 6, "payload_scope": "NASA-provided", "payloads_listed_complete": false,
+      "payloads": [
+        {"name": "Radio Observations at the Lunar Surface of the photoElectron Sheath (ROLSES)", "category": "Radio & plasma", "description": "Radio observations of the surface photoelectron sheath."},
+        {"name": "Navigation Doppler Lidar (NDL)", "category": "Navigation & geodesy", "description": "Precision velocity and range sensing for landing."},
+        {"name": "Stereo Cameras for Lunar Plume-Surface Studies (SCALPSS)", "category": "Plume–surface interaction", "description": "Cameras imaging engine plume effects on the regolith."},
+        {"name": "Lunar Node 1 (LN-1)", "category": "Navigation & geodesy", "description": "Autonomous navigation demonstration."},
+        {"name": "Laser Retroreflector Array (LRA)", "category": "Navigation & geodesy", "description": "Passive reflector for laser ranging."}
+      ],
+      "source_url": "https://www.nasa.gov/missions/lro/nasas-lro-images-intuitive-machines-odysseus-lander/", "source_label": "NASA — LRO images Odysseus", "last_checked": "2026-10-12", "confidence": "high"
+    },
+    {
+      "id": "blue-ghost-1", "name": "Blue Ghost Mission 1", "provider": "Firefly Aerospace", "task_order": "TO 19D",
+      "lander": "Blue Ghost", "launch_vehicle": "SpaceX Falcon 9",
+      "launch_actual": "2025-01-15T06:11:00Z", "landing_actual": "2025-03-02T08:34:00Z", "ops_end_documented": true,
+      "launch_target_text": null, "landing_target_text": null,
+      "lifecycle": "completed", "outcome": "success",
+      "outcome_note": "Upright landing in Mare Crisium; NASA reports surface operations completed in March 2025.",
+      "target_site_name": "Mare Crisium (Mons Latreille region)", "landing_region": "Near side",
+      "latitude": 18.562, "longitude": 61.810, "coordinate_kind": "reported_actual",
+      "coordinate_note": "18.562°N, 61.810°E per NASA NSSDCA anthropogenic-objects table.",
+      "payload_count": 10, "payload_scope": "NASA-provided", "payloads_listed_complete": false,
+      "payloads": [
+        {"name": "Lunar Instrumentation for Subsurface Thermal Exploration with Rapidity (LISTER)", "category": "Geophysics", "description": "Heat-flow probe."},
+        {"name": "Lunar Magnetotelluric Sounder (LMS)", "category": "Geophysics", "description": "Probes the mantle via electromagnetic sounding."},
+        {"name": "Lunar PlanetVac (LPV)", "category": "Technology demo", "description": "Pneumatic regolith sample collection."},
+        {"name": "Next Gen Lunar Retroreflector (NGLR-1)", "category": "Navigation & geodesy", "description": "Laser retroreflector for precise ranging."},
+        {"name": "Regolith Adherence Characterization (RAC)", "category": "Dust & regolith", "description": "Measures regolith adhesion to materials."},
+        {"name": "Radiation Tolerant Computer (RadPC)", "category": "Radiation", "description": "Radiation-tolerant computing demonstration."},
+        {"name": "Lunar GNSS Receiver Experiment (LuGRE)", "category": "Navigation & geodesy", "description": "Tests GNSS signal acquisition at the Moon."},
+        {"name": "Electrodynamic Dust Shield (EDS)", "category": "Dust & regolith", "description": "Active dust-mitigation technology."},
+        {"name": "Lunar Environment Heliospheric X-ray Imager (LEXI)", "category": "Exosphere & plasma", "description": "X-ray imaging of Earth's magnetosphere."}
+      ],
+      "source_url": "https://www.nasa.gov/event/clps-landing-firefly-aerospaces-blue-ghost-mission-1/", "source_label": "NASA — Blue Ghost Mission 1 landing", "last_checked": "2026-10-12", "confidence": "high"
+    },
+    {
+      "id": "im-2", "name": "IM-2 (Athena)", "provider": "Intuitive Machines", "task_order": "PRIME-1",
+      "lander": "Nova-C Athena", "launch_vehicle": "SpaceX Falcon 9",
+      "launch_actual": "2025-02-27T00:16:30Z", "landing_actual": "2025-03-06T17:28:50Z", "ops_end_documented": true,
+      "launch_target_text": null, "landing_target_text": null,
+      "lifecycle": "completed", "outcome": "partial",
+      "outcome_note": "Landed on its side near Mons Mouton; NASA received some data before the lander's mission ended.",
+      "target_site_name": "Mons Mouton plateau", "landing_region": "South polar region",
+      "latitude": -84.7906, "longitude": 29.1957, "coordinate_kind": "reported_actual",
+      "coordinate_note": "84.7906°S, 29.1957°E per NASA NSSDCA anthropogenic-objects table.",
+      "payload_count": 2, "payload_scope": "NASA-provided (PRIME-1 suite)", "payloads_listed_complete": true,
+      "payloads": [
+        {"name": "TRIDENT drill", "category": "Volatiles & resources", "description": "Subsurface drill for regolith sampling."},
+        {"name": "Mass Spectrometer observing lunar operations (MSolo)", "category": "Volatiles & resources", "description": "Mass spectrometer analysing volatiles."}
+      ],
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2025/02/np-2025-02-005-jsc-clps-intuitive-machines-press-kit-508-2-25-25.pdf", "source_label": "NASA — IM-2 press kit", "last_checked": "2026-10-12", "confidence": "medium"
+    },
+    {
+      "id": "griffin-1", "name": "Griffin Mission One", "provider": "Astrobotic", "task_order": "TO 20A",
+      "lander": "Griffin", "launch_vehicle": "SpaceX Falcon Heavy",
+      "launch_actual": null, "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": "No earlier than November 2026 (reported; schedule may change)", "landing_target_text": null,
+      "lifecycle": "planned", "outcome": "pending", "outcome_note": "Originally to carry NASA's VIPER; manifest restructured. Schedule per secondary reports of NASA statements.",
+      "target_site_name": "Lunar south pole region", "landing_region": "South polar region",
+      "latitude": null, "longitude": null, "coordinate_kind": "unavailable", "coordinate_note": "Specific landing coordinates not confirmed in the sources checked.",
+      "payload_count": null, "payload_scope": "unknown", "payloads_listed_complete": false, "payloads": [],
+      "source_url": "https://www.nasa.gov/event/clps-flight-astrobotics-griffin-mission-one/", "source_label": "NASA — Griffin Mission One", "last_checked": "2026-10-12", "confidence": "low"
+    },
+    {
+      "id": "im-3", "name": "IM-3", "provider": "Intuitive Machines", "task_order": "CP-11",
+      "lander": "Nova-C", "launch_vehicle": "SpaceX Falcon 9",
+      "launch_actual": null, "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": "Not confirmed — sources disagree on the date", "landing_target_text": null,
+      "lifecycle": "planned", "outcome": "pending", "outcome_note": "Carries NASA's Lunar Vertex suite to Reiner Gamma.",
+      "target_site_name": "Reiner Gamma swirl", "landing_region": "Near side",
+      "latitude": 7.5, "longitude": -59.0, "coordinate_kind": "estimated_region", "coordinate_note": "Approximate centre of the Reiner Gamma swirl; not an actual landing point.",
+      "payload_count": null, "payload_scope": "unknown", "payloads_listed_complete": false,
+      "payloads": [
+        {"name": "Lunar Vertex (LVx)", "category": "Radio & plasma", "description": "Investigates the swirl's magnetic anomaly and its interaction with the solar wind."}
+      ],
+      "source_url": "https://science.nasa.gov/lunar-discovery/deliveries/cp-11", "source_label": "NASA — CP-11 delivery", "last_checked": "2026-10-12", "confidence": "medium"
+    },
+    {
+      "id": "blue-ghost-2", "name": "Blue Ghost Mission 2", "provider": "Firefly Aerospace", "task_order": "CS-3",
+      "lander": "Blue Ghost", "launch_vehicle": null,
+      "launch_actual": null, "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": "Not confirmed — recent reports point to 2027", "landing_target_text": null,
+      "lifecycle": "planned", "outcome": "pending", "outcome_note": "Far-side delivery with an orbital relay satellite.",
+      "target_site_name": "Lunar far side", "landing_region": "Far side",
+      "latitude": null, "longitude": null, "coordinate_kind": "unavailable", "coordinate_note": "Far-side site coordinates not confirmed in the sources checked.",
+      "payload_count": 2, "payload_scope": "NASA-provided (per NASA CLPS Providers page)", "payloads_listed_complete": false, "payloads": [],
+      "source_url": "https://www.nasa.gov/commercial-lunar-payload-services/clps-providers/", "source_label": "NASA — CLPS Providers", "last_checked": "2026-10-12", "confidence": "medium"
+    },
+    {
+      "id": "blue-moon-mk1", "name": "Blue Moon MK1", "provider": "Blue Origin", "task_order": null,
+      "lander": "Blue Moon MK1", "launch_vehicle": "Blue Origin New Glenn",
+      "launch_actual": null, "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": "Not confirmed — reported as early 2027", "landing_target_text": null,
+      "lifecycle": "planned", "outcome": "pending", "outcome_note": "Schedule from secondary reports; verify against NASA.",
+      "target_site_name": "Near Shackleton crater (reported)", "landing_region": "South polar region",
+      "latitude": null, "longitude": null, "coordinate_kind": "unavailable", "coordinate_note": "Landing coordinates not confirmed.",
+      "payload_count": null, "payload_scope": "unknown", "payloads_listed_complete": false, "payloads": [],
+      "source_url": "https://www.nasa.gov/commercial-lunar-payload-services/", "source_label": "NASA — CLPS", "last_checked": "2026-10-12", "confidence": "low"
+    },
+    {
+      "id": "draper-cp-12", "name": "Draper / ispace-U.S. CP-12", "provider": "Draper (with ispace-U.S.)", "task_order": "CP-12",
+      "lander": "APEX 1.0", "launch_vehicle": null,
+      "launch_actual": null, "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": null, "landing_target_text": null,
+      "lifecycle": "cancelled", "outcome": "none", "outcome_note": "Reported cancelled in July 2026 after lander development delays; payloads may be reassigned. Based on secondary reporting.",
+      "target_site_name": "Schrödinger Basin (far side)", "landing_region": "Far side",
+      "latitude": -75.0, "longitude": 132.4, "coordinate_kind": "estimated_region", "coordinate_note": "Approximate basin centre; not an actual landing point.",
+      "payload_count": null, "payload_scope": "unknown", "payloads_listed_complete": false, "payloads": [],
+      "source_url": "https://science.nasa.gov/lunar-discovery/deliveries/cp-12", "source_label": "NASA — CP-12 delivery", "last_checked": "2026-10-12", "confidence": "low"
+    },
+    {
+      "id": "blue-ghost-3", "name": "Blue Ghost Mission 3", "provider": "Firefly Aerospace", "task_order": "CP-21",
+      "lander": "Blue Ghost", "launch_vehicle": null,
+      "launch_actual": null, "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": "Not confirmed — later than 2026", "landing_target_text": null,
+      "lifecycle": "planned", "outcome": "pending", "outcome_note": "Award announced December 2024.",
+      "target_site_name": "Gruithuisen Domes", "landing_region": "Near side",
+      "latitude": 36.6, "longitude": -39.5, "coordinate_kind": "estimated_region", "coordinate_note": "Approximate location of the Gruithuisen Domes; not an actual landing point.",
+      "payload_count": null, "payload_scope": "unknown", "payloads_listed_complete": false, "payloads": [],
+      "source_url": "https://www.nasa.gov/commercial-lunar-payload-services/clps-providers/", "source_label": "NASA — CLPS Providers", "last_checked": "2026-10-12", "confidence": "medium"
+    },
+    {
+      "id": "im-4", "name": "IM-4", "provider": "Intuitive Machines", "task_order": "CP-22",
+      "lander": "Nova-C", "launch_vehicle": null,
+      "launch_actual": null, "landing_actual": null, "ops_end_documented": false,
+      "launch_target_text": "Not confirmed", "landing_target_text": null,
+      "lifecycle": "planned", "outcome": "pending", "outcome_note": "NASA lists the landing site only as the lunar south pole.",
+      "target_site_name": "Lunar south pole region", "landing_region": "South polar region",
+      "latitude": null, "longitude": null, "coordinate_kind": "unavailable", "coordinate_note": "Specific coordinates not confirmed.",
+      "payload_count": null, "payload_scope": "unknown", "payloads_listed_complete": false, "payloads": [],
+      "source_url": "https://www.nasa.gov/commercial-lunar-payload-services/clps-providers/", "source_label": "NASA — CLPS Providers", "last_checked": "2026-10-12", "confidence": "low"
+    }
+  ]
+}

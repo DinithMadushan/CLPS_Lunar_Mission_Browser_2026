@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "source": "NASA Planetary Fact Sheet (NSSDCA)", "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+    "note": "Static reference values entered from the NASA fact sheets; not re-fetched on 2026-10-12. Gravity = mean equatorial surface gravity (m/s²); for the gas/ice giants, at the 1-bar level. Diameters are equatorial.",
+    "layout_warning": "The 3D layout uses a compressed, non-linear VISUALISATION scale. It is not a physically accurate distance or size map."
+  },
+  "bodies": [
+    {"id":"sun","name":"Sun","category":"Star","order":0,"diameter_km":1392700,"gravity_ms2":274.0,"orbital_period_days":null,"semi_major_axis_au":0,"atmosphere":"Hot plasma; outer layers are the photosphere, chromosphere and corona.","summary":"The star at the centre of the Solar System, holding over 99% of its mass."},
+    {"id":"mercury","name":"Mercury","category":"Terrestrial planet","order":1,"diameter_km":4879,"gravity_ms2":3.70,"orbital_period_days":87.97,"semi_major_axis_au":0.387,"atmosphere":"Virtually none; a tenuous exosphere.","summary":"The smallest planet and the closest to the Sun."},
+    {"id":"venus","name":"Venus","category":"Terrestrial planet","order":2,"diameter_km":12104,"gravity_ms2":8.87,"orbital_period_days":224.7,"semi_major_axis_au":0.723,"atmosphere":"Very dense; mostly carbon dioxide.","summary":"Similar in size to Earth, with a runaway greenhouse atmosphere."},
+    {"id":"earth","name":"Earth","category":"Terrestrial planet","order":3,"diameter_km":12756,"gravity_ms2":9.80665,"orbital_period_days":365.25,"semi_major_axis_au":1.0,"atmosphere":"Nitrogen and oxygen.","summary":"Our home planet, orbited by the Moon.","satellites":["moon"]},
+    {"id":"mars","name":"Mars","category":"Terrestrial planet","order":4,"diameter_km":6792,"gravity_ms2":3.71,"orbital_period_days":686.98,"semi_major_axis_au":1.524,"atmosphere":"Thin; mostly carbon dioxide.","summary":"A cold desert world with the largest volcano in the Solar System."},
+    {"id":"jupiter","name":"Jupiter","category":"Gas giant","order":5,"diameter_km":142984,"gravity_ms2":24.79,"orbital_period_days":4332.59,"semi_major_axis_au":5.203,"atmosphere":"Mostly hydrogen and helium.","summary":"The largest planet, with a persistent giant storm, the Great Red Spot."},
+    {"id":"saturn","name":"Saturn","category":"Gas giant","order":6,"diameter_km":120536,"gravity_ms2":10.44,"orbital_period_days":10759.22,"semi_major_axis_au":9.537,"atmosphere":"Mostly hydrogen and helium.","summary":"Known for its extensive ring system."},
+    {"id":"uranus","name":"Uranus","category":"Ice giant","order":7,"diameter_km":51118,"gravity_ms2":8.87,"orbital_period_days":30688.5,"semi_major_axis_au":19.19,"atmosphere":"Hydrogen, helium and methane.","summary":"An ice giant rotating on its side."},
+    {"id":"neptune","name":"Neptune","category":"Ice giant","order":8,"diameter_km":49528,"gravity_ms2":11.15,"orbital_period_days":60182,"semi_major_axis_au":30.07,"atmosphere":"Hydrogen, helium and methane.","summary":"The outermost recognised planet, with supersonic winds."},
+    {"id":"moon","name":"Moon","category":"Natural satellite of Earth","order":3.1,"parent":"earth","diameter_km":3474.8,"gravity_ms2":1.62,"orbital_period_days":27.32,"semi_major_axis_au":0.00257,"atmosphere":"Essentially none; an extremely thin exosphere.","summary":"Earth's only natural satellite and the destination of the CLPS programme."}
+  ]
+}
